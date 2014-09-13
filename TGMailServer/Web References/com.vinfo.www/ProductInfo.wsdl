@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.vinfo.com/Updates/TGMailServer/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://www.vinfo.com/Updates/TGMailServer/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.vinfo.com/Updates/TGMailServer/">
+      <s:element name="checkUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="major" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="minor" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="patch" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="build" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="checkUpdateResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="getVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMajor">
+        <s:complexType />
+      </s:element>
+      <s:element name="getMajorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getMajorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMinor">
+        <s:complexType />
+      </s:element>
+      <s:element name="getMinorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getMinorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPatch">
+        <s:complexType />
+      </s:element>
+      <s:element name="getPatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getPatchResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBuild">
+        <s:complexType />
+      </s:element>
+      <s:element name="getBuildResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getBuildResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSponsors">
+        <s:complexType />
+      </s:element>
+      <s:element name="getSponsorsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSponsorsResult" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="checkUpdateSoapIn">
+    <part name="parameters" element="s0:checkUpdate" />
+  </message>
+  <message name="checkUpdateSoapOut">
+    <part name="parameters" element="s0:checkUpdateResponse" />
+  </message>
+  <message name="getVersionSoapIn">
+    <part name="parameters" element="s0:getVersion" />
+  </message>
+  <message name="getVersionSoapOut">
+    <part name="parameters" element="s0:getVersionResponse" />
+  </message>
+  <message name="getMajorSoapIn">
+    <part name="parameters" element="s0:getMajor" />
+  </message>
+  <message name="getMajorSoapOut">
+    <part name="parameters" element="s0:getMajorResponse" />
+  </message>
+  <message name="getMinorSoapIn">
+    <part name="parameters" element="s0:getMinor" />
+  </message>
+  <message name="getMinorSoapOut">
+    <part name="parameters" element="s0:getMinorResponse" />
+  </message>
+  <message name="getPatchSoapIn">
+    <part name="parameters" element="s0:getPatch" />
+  </message>
+  <message name="getPatchSoapOut">
+    <part name="parameters" element="s0:getPatchResponse" />
+  </message>
+  <message name="getBuildSoapIn">
+    <part name="parameters" element="s0:getBuild" />
+  </message>
+  <message name="getBuildSoapOut">
+    <part name="parameters" element="s0:getBuildResponse" />
+  </message>
+  <message name="getSponsorsSoapIn">
+    <part name="parameters" element="s0:getSponsors" />
+  </message>
+  <message name="getSponsorsSoapOut">
+    <part name="parameters" element="s0:getSponsorsResponse" />
+  </message>
+  <portType name="ProductInfoSoap">
+    <operation name="checkUpdate">
+      <input message="s0:checkUpdateSoapIn" />
+      <output message="s0:checkUpdateSoapOut" />
+    </operation>
+    <operation name="getVersion">
+      <input message="s0:getVersionSoapIn" />
+      <output message="s0:getVersionSoapOut" />
+    </operation>
+    <operation name="getMajor">
+      <input message="s0:getMajorSoapIn" />
+      <output message="s0:getMajorSoapOut" />
+    </operation>
+    <operation name="getMinor">
+      <input message="s0:getMinorSoapIn" />
+      <output message="s0:getMinorSoapOut" />
+    </operation>
+    <operation name="getPatch">
+      <input message="s0:getPatchSoapIn" />
+      <output message="s0:getPatchSoapOut" />
+    </operation>
+    <operation name="getBuild">
+      <input message="s0:getBuildSoapIn" />
+      <output message="s0:getBuildSoapOut" />
+    </operation>
+    <operation name="getSponsors">
+      <input message="s0:getSponsorsSoapIn" />
+      <output message="s0:getSponsorsSoapOut" />
+    </operation>
+  </portType>
+  <binding name="ProductInfoSoap" type="s0:ProductInfoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="checkUpdate">
+      <soap:operation soapAction="http://www.vinfo.com/Updates/TGMailServer/checkUpdate" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVersion">
+      <soap:operation soapAction="http://www.vinfo.com/Updates/TGMailServer/getVersion" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getMajor">
+      <soap:operation soapAction="http://www.vinfo.com/Updates/TGMailServer/getMajor" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getMinor">
+      <soap:operation soapAction="http://www.vinfo.com/Updates/TGMailServer/getMinor" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPatch">
+      <soap:operation soapAction="http://www.vinfo.com/Updates/TGMailServer/getPatch" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getBuild">
+      <soap:operation soapAction="http://www.vinfo.com/Updates/TGMailServer/getBuild" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSponsors">
+      <soap:operation soapAction="http://www.vinfo.com/Updates/TGMailServer/getSponsors" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ProductInfo">
+    <port name="ProductInfoSoap" binding="s0:ProductInfoSoap">
+      <soap:address location="http://www.vinfo.com/Updates/TGMailServer/ProductInfo.asmx" />
+    </port>
+  </service>
+</definitions>
