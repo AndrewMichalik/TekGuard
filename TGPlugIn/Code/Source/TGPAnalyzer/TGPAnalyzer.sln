@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGPAnalyzer", "TGPAnalyzer.csproj", "{4219C56D-D2A0-422E-A19F-20039E3E2EC7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{4219C56D-D2A0-422E-A19F-20039E3E2EC7}.Debug.ActiveCfg = Debug|.NET
+		{4219C56D-D2A0-422E-A19F-20039E3E2EC7}.Debug.Build.0 = Debug|.NET
+		{4219C56D-D2A0-422E-A19F-20039E3E2EC7}.Release.ActiveCfg = Release|.NET
+		{4219C56D-D2A0-422E-A19F-20039E3E2EC7}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

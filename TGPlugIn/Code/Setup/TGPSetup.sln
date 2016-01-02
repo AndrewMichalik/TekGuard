@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGPlugIn", "..\Source\TGPlugIn\TGPlugIn.csproj", "{C185ECFD-FF65-4D23-A8DA-CD720CBE619B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TGPSetup", "TGPSetup.vdproj", "{A141DFB0-1E08-42CB-8CA2-FF9A1272DFC1}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGPDashboard", "..\Source\TGPDashboard\TGPDashboard.csproj", "{E9EC40C9-F264-4A6B-9931-2899230DEA34}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C185ECFD-FF65-4D23-A8DA-CD720CBE619B}.Debug.ActiveCfg = Debug|.NET
+		{C185ECFD-FF65-4D23-A8DA-CD720CBE619B}.Debug.Build.0 = Debug|.NET
+		{C185ECFD-FF65-4D23-A8DA-CD720CBE619B}.Release.ActiveCfg = Release|.NET
+		{C185ECFD-FF65-4D23-A8DA-CD720CBE619B}.Release.Build.0 = Release|.NET
+		{A141DFB0-1E08-42CB-8CA2-FF9A1272DFC1}.Debug.ActiveCfg = Debug
+		{A141DFB0-1E08-42CB-8CA2-FF9A1272DFC1}.Debug.Build.0 = Debug
+		{A141DFB0-1E08-42CB-8CA2-FF9A1272DFC1}.Release.ActiveCfg = Release
+		{A141DFB0-1E08-42CB-8CA2-FF9A1272DFC1}.Release.Build.0 = Release
+		{E9EC40C9-F264-4A6B-9931-2899230DEA34}.Debug.ActiveCfg = Debug|.NET
+		{E9EC40C9-F264-4A6B-9931-2899230DEA34}.Debug.Build.0 = Debug|.NET
+		{E9EC40C9-F264-4A6B-9931-2899230DEA34}.Release.ActiveCfg = Release|.NET
+		{E9EC40C9-F264-4A6B-9931-2899230DEA34}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

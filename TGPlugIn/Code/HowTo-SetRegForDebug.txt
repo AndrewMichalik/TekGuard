@@ -1,0 +1,7 @@
+Uninstall / Re-install without "developer's source"
+
+Find:
+C:\Program Files\VInfo\TekGuard PlugIn\Application
+
+Replace (approximately 20 instances) with:
+D:\Development\TGPlugIn\Code\Application\Debug

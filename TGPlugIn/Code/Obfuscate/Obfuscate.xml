@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE dotfuscator SYSTEM "http://www.preemptive.com/dotfuscator/dtd/dotfuscator_v1.2.dtd">
+<dotfuscator version="1.2">
+  <!--This is application generated code. Do not edit manually.-->
+  <trigger>
+    <filelist>
+      <file dir="D:\Development\TGPlugIn\Obfuscate\input\" name="TGAnalyzer.dll" />
+      <file dir="D:\Development\TGPlugIn\Obfuscate\input\" name="TGAssist.dll" />
+      <file dir="D:\Development\TGPlugIn\Obfuscate\input\" name="TGDashboard.dll" />
+    </filelist>
+  </trigger>
+  <output>
+    <file dir="D:\Development\TGPlugIn\Application\Release" />
+  </output>
+  <tempdir>
+    <file dir="${configdir}\temp" />
+  </tempdir>
+  <renaming>
+    <mapping>
+      <mapoutput overwrite="true">
+        <file dir="${configdir}\reports\" name="TGPlugIn_Map.xml" />
+      </mapoutput>
+    </mapping>
+  </renaming>
+</dotfuscator>

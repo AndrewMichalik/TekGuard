@@ -1,0 +1,113 @@
+<?xml version="1.0" standalone="yes" ?>
+<NewDataSet xmlns="http://tempuri.org/TGPInitialize_New.xsd">
+	<xs:schema id="NewDataSet" xmlns:mstns="http://tempuri.org/TGPInitialize_New.xsd" xmlns="http://tempuri.org/TGPInitialize_New.xsd"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+		attributeFormDefault="qualified" elementFormDefault="qualified">
+		<xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:EnforceConstraints="False">
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+					<xs:element name="tblApplicationInitialize">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="VersionFormat" type="xs:string" />
+								<xs:element name="StartupCheckUpdates" type="xs:boolean" default="false" minOccurs="0" />
+								<xs:element name="StartupShowInterface" type="xs:boolean" default="false" minOccurs="0" />
+								<xs:element name="StartupShowTrayIcon" type="xs:boolean" default="false" minOccurs="0" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="tblDataSource">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="DataName" type="xs:string" />
+								<xs:element name="ConnTemplate" type="xs:string" minOccurs="0" />
+								<xs:element name="UserID" type="xs:string" minOccurs="0" />
+								<xs:element name="Password" type="xs:string" minOccurs="0" />
+								<xs:element name="DataSource" type="xs:string" minOccurs="0" />
+								<xs:element name="DataType" type="xs:string" minOccurs="0" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="tblRemoteServer">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ServerName" type="xs:string" minOccurs="0" />
+								<xs:element name="Address" type="xs:string" minOccurs="0" />
+								<xs:element name="Port" type="xs:string" minOccurs="0" />
+								<xs:element name="AppName" type="xs:string" minOccurs="0" />
+								<xs:element name="UserID" type="xs:string" minOccurs="0" />
+								<xs:element name="Password" type="xs:string" minOccurs="0" />
+								<xs:element name="CryptKey" type="xs:string" minOccurs="0" />
+								<xs:element name="Enabled" type="xs:boolean" minOccurs="0" default="true" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="tblRemoteClient">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ClientName" type="xs:string" minOccurs="0" />
+								<xs:element name="Port" type="xs:string" minOccurs="0" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:complexType>
+			<xs:unique name="tblApplicationInitializeKey" msdata:PrimaryKey="true">
+				<xs:selector xpath=".//mstns:tblApplicationInitialize" />
+				<xs:field xpath="mstns:VersionFormat" />
+			</xs:unique>
+			<xs:unique name="tblDataSourceKey" msdata:PrimaryKey="true">
+				<xs:selector xpath=".//mstns:tblDataSource" />
+				<xs:field xpath="mstns:DataName" />
+			</xs:unique>
+			<xs:unique name="tblRemoteServerKey" msdata:PrimaryKey="true">
+				<xs:selector xpath=".//mstns:tblRemoteServer" />
+				<xs:field xpath="mstns:ServerName" />
+			</xs:unique>
+		</xs:element>
+	</xs:schema>
+	<tblApplicationInitialize xmlns="">
+		<VersionFormat>0.7.9</VersionFormat>
+		<StartupCheckUpdates>true</StartupCheckUpdates>
+		<StartupShowInterface>true</StartupShowInterface>
+		<StartupShowTrayIcon>false</StartupShowTrayIcon>
+	</tblApplicationInitialize>
+	<tblDataSource xmlns="">
+		<DataName>Configure</DataName>
+		<ConnTemplate>Provider=Microsoft.Jet.OLEDB.4.0;Password="{0}";User ID={1};Data Source={2};Mode={3}</ConnTemplate>
+		<UserID></UserID>
+		<Password></Password>
+		<DataSource>TGPConfigure</DataSource>
+		<DataType>.mdb</DataType>
+	</tblDataSource>
+	<tblDataSource xmlns="">
+		<DataName>Analyzer</DataName>
+		<ConnTemplate>Provider=Microsoft.Jet.OLEDB.4.0;Password="{0}";User ID={1};Data Source={2};Mode={3}</ConnTemplate>
+		<UserID></UserID>
+		<Password></Password>
+		<DataSource>TGPAnalyzer</DataSource>
+		<DataType>.mdb</DataType>
+	</tblDataSource>
+	<tblDataSource xmlns="">
+		<DataName>Tokens</DataName>
+		<ConnTemplate>{2}</ConnTemplate>
+		<UserID></UserID>
+		<Password></Password>
+		<DataSource>TGPTokens</DataSource>
+		<DataType>.xml</DataType>
+	</tblDataSource>
+	<tblRemoteServer xmlns="">
+		<ServerName>RMServer</ServerName>
+		<Address>localhost</Address>
+		<Port>8342</Port>
+		<AppName>TGPlugIn</AppName>
+		<UserID>YourUserID</UserID>
+		<Password></Password>
+		<CryptKey></CryptKey>
+		<Enabled>true</Enabled>
+	</tblRemoteServer>
+	<tblRemoteClient xmlns="">
+		<ClientName>RMClient</ClientName>
+		<Port>8343</Port>
+	</tblRemoteClient>
+</NewDataSet>

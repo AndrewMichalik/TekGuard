@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.vinfo.com/Updates/TGPlugIn/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://www.vinfo.com/Updates/TGPlugIn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.vinfo.com/Updates/TGPlugIn/">
+      <s:element name="checkUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="major" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="minor" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="patch" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="build" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="checkUpdateResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="getVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMajor">
+        <s:complexType />
+      </s:element>
+      <s:element name="getMajorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getMajorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMinor">
+        <s:complexType />
+      </s:element>
+      <s:element name="getMinorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getMinorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPatch">
+        <s:complexType />
+      </s:element>
+      <s:element name="getPatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getPatchResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBuild">
+        <s:complexType />
+      </s:element>
+      <s:element name="getBuildResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getBuildResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSponsors">
+        <s:complexType />
+      </s:element>
+      <s:element name="getSponsorsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSponsorsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="checkUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:checkUpdate" />
+  </wsdl:message>
+  <wsdl:message name="checkUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:checkUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="getVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:getVersion" />
+  </wsdl:message>
+  <wsdl:message name="getVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:getVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMajorSoapIn">
+    <wsdl:part name="parameters" element="tns:getMajor" />
+  </wsdl:message>
+  <wsdl:message name="getMajorSoapOut">
+    <wsdl:part name="parameters" element="tns:getMajorResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMinorSoapIn">
+    <wsdl:part name="parameters" element="tns:getMinor" />
+  </wsdl:message>
+  <wsdl:message name="getMinorSoapOut">
+    <wsdl:part name="parameters" element="tns:getMinorResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPatchSoapIn">
+    <wsdl:part name="parameters" element="tns:getPatch" />
+  </wsdl:message>
+  <wsdl:message name="getPatchSoapOut">
+    <wsdl:part name="parameters" element="tns:getPatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBuildSoapIn">
+    <wsdl:part name="parameters" element="tns:getBuild" />
+  </wsdl:message>
+  <wsdl:message name="getBuildSoapOut">
+    <wsdl:part name="parameters" element="tns:getBuildResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSponsorsSoapIn">
+    <wsdl:part name="parameters" element="tns:getSponsors" />
+  </wsdl:message>
+  <wsdl:message name="getSponsorsSoapOut">
+    <wsdl:part name="parameters" element="tns:getSponsorsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ProductInfoSoap">
+    <wsdl:operation name="checkUpdate">
+      <wsdl:input message="tns:checkUpdateSoapIn" />
+      <wsdl:output message="tns:checkUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getVersion">
+      <wsdl:input message="tns:getVersionSoapIn" />
+      <wsdl:output message="tns:getVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMajor">
+      <wsdl:input message="tns:getMajorSoapIn" />
+      <wsdl:output message="tns:getMajorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMinor">
+      <wsdl:input message="tns:getMinorSoapIn" />
+      <wsdl:output message="tns:getMinorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPatch">
+      <wsdl:input message="tns:getPatchSoapIn" />
+      <wsdl:output message="tns:getPatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBuild">
+      <wsdl:input message="tns:getBuildSoapIn" />
+      <wsdl:output message="tns:getBuildSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSponsors">
+      <wsdl:input message="tns:getSponsorsSoapIn" />
+      <wsdl:output message="tns:getSponsorsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProductInfoSoap" type="tns:ProductInfoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="checkUpdate">
+      <soap:operation soapAction="http://www.vinfo.com/Updates/TGPlugIn/checkUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVersion">
+      <soap:operation soapAction="http://www.vinfo.com/Updates/TGPlugIn/getVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMajor">
+      <soap:operation soapAction="http://www.vinfo.com/Updates/TGPlugIn/getMajor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMinor">
+      <soap:operation soapAction="http://www.vinfo.com/Updates/TGPlugIn/getMinor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPatch">
+      <soap:operation soapAction="http://www.vinfo.com/Updates/TGPlugIn/getPatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBuild">
+      <soap:operation soapAction="http://www.vinfo.com/Updates/TGPlugIn/getBuild" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSponsors">
+      <soap:operation soapAction="http://www.vinfo.com/Updates/TGPlugIn/getSponsors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProductInfo">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="ProductInfoSoap" binding="tns:ProductInfoSoap">
+      <soap:address location="http://www.vinfo.com/Updates/TGPlugIn/ProductInfo.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
