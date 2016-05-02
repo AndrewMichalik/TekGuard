@@ -1,0 +1,206 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{E9EC40C9-F264-4A6B-9931-2899230DEA34}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = "res\TGMCockpit.ico"
+                AssemblyKeyContainerName = ""
+                AssemblyName = "TGMCockpit"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "WinExe"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "TGMCockpit"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "true"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "..\..\Application\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "..\..\Application\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.ServiceProcess"
+                    AssemblyName = "System.ServiceProcess"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.ServiceProcess.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.XML.dll"
+                />
+                <Reference
+                    Name = "TGMSupport"
+                    AssemblyName = "TGMSupport"
+                    HintPath = "..\Application\Debug\TGMSupport.dll"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Drawing.dll"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Windows.Forms.dll"
+                />
+                <Reference
+                    Name = "System.Management"
+                    AssemblyName = "System.Management"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Management.dll"
+                />
+                <Reference
+                    Name = "System.Configuration.Install"
+                    AssemblyName = "System.Configuration.Install"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Configuration.Install.dll"
+                />
+                <Reference
+                    Name = "TGMController"
+                    AssemblyName = "TGMController"
+                    HintPath = "..\Application\Debug\TGMController.dll"
+                />
+                <Reference
+                    Name = "TGMConnector"
+                    AssemblyName = "TGMConnector"
+                    HintPath = "..\..\Application\Debug\TGMConnector.dll"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "C:\WINNT\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AppMain.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AppMain.resx"
+                    DependentUpon = "AppMain.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Bootstrap.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Cockpit.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Cockpit.resx"
+                    DependentUpon = "Cockpit.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmSplash.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmSplash.resx"
+                    DependentUpon = "frmSplash.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Web References\com.vinfo.www\ProductInfo.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\com.vinfo.www\ProductInfo.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\com.vinfo.www\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.cs"
+                />
+                <File
+                    RelPath = "Web References\com.vinfo.www\Reference.cs"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\com.vinfo.www\"
+                    WebReferenceUrl = "http://www.vinfo.com/Updates/TGMailServer/ProductInfo.asmx"
+                    UrlBehavior = "Static"
+                />
+                <Folder
+                    RelPath = "Web References\"
+                    WebReferences = "TRUE"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+
